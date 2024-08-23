@@ -123,6 +123,7 @@ xcopy "$(SolutionDir)Extern\AlphaEngine\lib\fmod.dll" "$(OutDir)" /s /r /y /q</C
     <ClCompile Include="GSM\GoalLevel.cpp" />
     <ClCompile Include="GSM\MainLevel.cpp" />
     <ClCompile Include="ComponentManager\LogicManager.h" />
+    <ClCompile Include="GSM\MainMenu_Level.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,9 @@ xcopy "$(SolutionDir)Extern\AlphaEngine\lib\fmod.dll" "$(OutDir)" /s /r /y /q</C
     <ClInclude Include="GSM\MainLevel.h" />
     <ClInclude Include="Components\RigidbodyComp.h" />
     <ClInclude Include="ComponentManager\MessageManager.h" />
+    <ClInclude Include="GSM\MainMenu_Level.h" />
+    <ClInclude Include="ResourceManager\Resource.h" />
+    <ClInclude Include="ResourceManager\ResourseManager.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Components\GameObject.inl" />

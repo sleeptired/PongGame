@@ -19,6 +19,9 @@ public:
 		unsigned char g = 255;
 		unsigned char b = 255;
 	};
+	float r, g, b, alpha;
+
+
 private:
 	Color mColor;
 	//texture
@@ -28,12 +31,16 @@ private:
 	//Transparency
 
 public:
+	SpriteComp() :r(0), g(0), b(0), alpha(0) {}
 	SpriteComp(GameObject* owner);
 	~SpriteComp();
 	void Update() override;
 	//draw
 
 	//Gettors/Settors
+
+	void SetColor(float newR, float newG, float newB, float newAlpha);
+	
 	Color& Getcolor() { return mColor; };
 	void SetTexture(const std::string& filepath);
 	static std::string GetType()

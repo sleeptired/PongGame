@@ -72,6 +72,9 @@
     <ClCompile Include="Components\AudioComponent.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="GSM\MainMenu_Level.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GSM\BaseLevel.h">
@@ -120,6 +123,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="ComponentManager\EventManger.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GSM\MainMenu_Level.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\ResourseManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager\Resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

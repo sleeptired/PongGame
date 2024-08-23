@@ -77,6 +77,7 @@ void TransformComp::SetPos(const AEVec2& otherPos)
 {
 	this->pos = otherPos;
 	CalculateMatrix();
+	//std::cout << pos.x << " " << pos.y << std::endl; 값 보기용
 }
 void TransformComp::SetScale(const AEVec2& otherScale)
 {

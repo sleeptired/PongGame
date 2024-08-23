@@ -18,4 +18,5 @@ public:
     void AddComponent(LogicComponent* component);
     void RemoveComp(LogicComponent* component);
     void Update();
+
 };

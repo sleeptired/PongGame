@@ -1,29 +1,22 @@
 #include "AudioComponent.h"
 #include "AEEngine.h"
 #include "AEAudio.h"
-
-
-
 AudioComp::AudioComp()
 {
 	mGroup = AEAudioCreateGroup();
 	mAudio = AEAudioLoadSound("");
 	volume = 0.5f;
 	pitch = 1;
-
-	loop = false;
-	Playing = false;
 }
 
 AudioComp::AudioComp(GameObject* own)
 {
-	mGroup= AEAudioCreateGroup();
-	mAudio= AEAudioLoadSound("");;
+	mGroup = AEAudioCreateGroup();
+	mAudio = AEAudioLoadSound("");;
 	volume = 0.5f;
 	pitch = 1;
 
-	loop = false;
-	Playing = false;
+
 }
 
 AudioComp::~AudioComp()
@@ -36,27 +29,31 @@ AudioComp::~AudioComp()
 void AudioComp::Update()
 {
 	//Do NOT Copy this
-	
-	if (!Playing)
-	{
-		Play();
-	}
-	
+
+	//if (!Playing)
+	//{
+	//	Play();
+	//}
+
+	Play();
+
 }
 
 void AudioComp::SetAudio(std::string s)
 {
-	mAudio =AEAudioLoadMusic(s.c_str());
+	mAudio = AEAudioLoadMusic(s.c_str());
 }
 
 void AudioComp::Play()
 {
-	int loops = loop ? -1 : 0;
-	AEAudioPlay(mAudio, mGroup, volume, pitch, loops);
-	Playing = true;
+	if (isplay == 1) {
+		AEAudioPlay(mAudio, mGroup, volume, pitch, -1);
+	}
+	isplay = 2;	
+	
 }
 
-bool AudioComp::IsPlaying() const
-{
-	return Playing;
-}
+//bool AudioComp::IsPlaying() const
+//{
+//	//return Playing;
+//}

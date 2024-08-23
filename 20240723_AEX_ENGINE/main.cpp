@@ -4,6 +4,7 @@
 #include <crtdbg.h> // To check for memory leaks
 #include "AEEngine.h"
 #include "GSM/GameStateManager.h"
+#include"GSM/MainMenu_Level.h"
 #include "GSM/MainLevel.h"
 #include "GSM/GoalLevel.h"
 
@@ -37,7 +38,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	AESysReset();
 
 	
-	gsm->ChangeLevel(new Levels::MainLevel);
+	//gsm->ChangeLevel(new Levels::MainLevel);
+	gsm->ChangeLevel(new Levels::MainMenu_Level);
 
 	// Game Loop
 	while (gsm->ShouldExit() == false)

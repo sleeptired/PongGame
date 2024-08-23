@@ -75,6 +75,7 @@ void GSM::GameStateManager::ChangeLevel(BaseLevel* newLvl)
     currentLevel = newLvl;
     //Initialize the level
     Init();
+
 }
 
 bool GSM::GameStateManager::ShouldExit()
